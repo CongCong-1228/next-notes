@@ -1,9 +1,6 @@
 import { Redis } from "ioredis";
 
 
-interface DATA {
-
-}
 
 const redis = new Redis()
 
@@ -24,7 +21,7 @@ export async function getAllNotes() {
 
 
 export async function addNote(data) {
-    const uuid = Date.now().toString()
+    const uuid = +Date.now().toString()
     await redis.hset("notes", [uuid], data)
     return uuid
 }

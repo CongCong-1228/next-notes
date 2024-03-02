@@ -302,6 +302,11 @@ ul.notes-list {
   position: relative;
   flex-grow: 1;
 }
+
+.sidebar-menu > nav {
+  width: 100%;
+}
+
 .sidebar-note-list-item {
   position: relative;
   margin-bottom: 12px;
